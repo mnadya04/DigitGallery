@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace DigitGallery.Models
+﻿namespace DigitGallery.Models
 {
+    using System.ComponentModel.DataAnnotations;
     public class Drawing
     {
         public int Id { get; set; }
