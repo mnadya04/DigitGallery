@@ -6,7 +6,7 @@ namespace DigitGallery.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! Heyyy... Nadya:)");
+            Console.WriteLine("Hello World!");
         }
     }
 }
