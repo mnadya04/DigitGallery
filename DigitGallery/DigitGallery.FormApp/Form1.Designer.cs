@@ -1,4 +1,5 @@
-﻿namespace DigitGallery.FormApp
+﻿
+namespace DigitGallery.FormApp
 {
     partial class Form1
     {
