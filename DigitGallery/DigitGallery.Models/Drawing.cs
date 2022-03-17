@@ -1,5 +1,6 @@
 ﻿namespace DigitGallery.Models
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
     public class Drawing
     {
@@ -12,6 +13,7 @@
         public double Price { get; set; }
         [Required]
         public string ImageUrl { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
         public int ArtistId { get; set; }
         public virtual Artist Artist { get; set; }
     }
