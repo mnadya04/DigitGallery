@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.Data", "DigitGallery.Data\DigitGallery.Data.csproj", "{441114B6-935C-4478-8AEA-2693B1B07F4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.Data", "DigitGallery.Data\DigitGallery.Data.csproj", "{441114B6-935C-4478-8AEA-2693B1B07F4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.ConsoleApp", "DigitGallery.ConsoleApp\DigitGallery.ConsoleApp.csproj", "{1037E1A5-E9D9-4CDA-9B91-05325600B817}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.ConsoleApp", "DigitGallery.ConsoleApp\DigitGallery.ConsoleApp.csproj", "{1037E1A5-E9D9-4CDA-9B91-05325600B817}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.FormApp", "DigitGallery.FormApp\DigitGallery.FormApp.csproj", "{6BB935FB-C32D-4C26-8F56-AE3B78759C64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.Models", "DigitGallery.Models\DigitGallery.Models.csproj", "{22818CFE-EF81-4895-A691-7839145DD059}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.Models", "DigitGallery.Models\DigitGallery.Models.csproj", "{22818CFE-EF81-4895-A691-7839145DD059}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.Services", "DigitGallery.Services\DigitGallery.Services.csproj", "{E7529C11-A9DB-41F2-9F0B-1AEF013E6661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.Services", "DigitGallery.Services\DigitGallery.Services.csproj", "{E7529C11-A9DB-41F2-9F0B-1AEF013E6661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.WebApp", "DigitGallery.WebApp\DigitGallery.WebApp.csproj", "{D3D16C92-25B2-4B09-B922-5BBADC5BBCB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.WebApp", "DigitGallery.WebApp\DigitGallery.WebApp.csproj", "{D3D16C92-25B2-4B09-B922-5BBADC5BBCB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.FormApp", "DigitGallery.FormApp\DigitGallery.FormApp.csproj", "{809E9473-B639-4255-90A5-4FA487C01036}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		{1037E1A5-E9D9-4CDA-9B91-05325600B817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1037E1A5-E9D9-4CDA-9B91-05325600B817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1037E1A5-E9D9-4CDA-9B91-05325600B817}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BB935FB-C32D-4C26-8F56-AE3B78759C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BB935FB-C32D-4C26-8F56-AE3B78759C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BB935FB-C32D-4C26-8F56-AE3B78759C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BB935FB-C32D-4C26-8F56-AE3B78759C64}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22818CFE-EF81-4895-A691-7839145DD059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22818CFE-EF81-4895-A691-7839145DD059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22818CFE-EF81-4895-A691-7839145DD059}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{D3D16C92-25B2-4B09-B922-5BBADC5BBCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3D16C92-25B2-4B09-B922-5BBADC5BBCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3D16C92-25B2-4B09-B922-5BBADC5BBCB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809E9473-B639-4255-90A5-4FA487C01036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809E9473-B639-4255-90A5-4FA487C01036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809E9473-B639-4255-90A5-4FA487C01036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809E9473-B639-4255-90A5-4FA487C01036}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
