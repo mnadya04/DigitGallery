@@ -19,6 +19,11 @@
             return appContext.Artists.Skip((page - 1) * artistsPerPage).Take(artistsPerPage).ToList();
         }
 
+        public int DrawingsCount()
+        {
+            return this.appContext.Drawings.Count();
+        }
+
         public Drawing GetDrawing(int id)
         {
             return appContext.Drawings.Find(id);

@@ -1,4 +1,7 @@
-﻿using DigitGallery.WebApp.Models;
+﻿using DigitGallery.Data;
+using DigitGallery.Models;
+using DigitGallery.Services;
+using DigitGallery.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,19 +15,29 @@ namespace DigitGallery.WebApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private DigitGalleryService service = new DigitGalleryService();
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Drawings()
         {
-            return View();
+            IndexDrawingsViewModel drawingModel = new IndexDrawingsViewModel();
+            drawingModel.Drawings = service.GetDrawings()
+                .Select(x => new IndexDrawingViewModel()
+                {
+                    Name = x.Name,
+                    Artist = x.Artist.Name
+                }).ToList();
+            drawingModel.DrawingsCount = service.DrawingsCount();
+            return View(drawingModel);
         }
 
         public IActionResult Privacy()
         {
+            
             return View();
         }
 

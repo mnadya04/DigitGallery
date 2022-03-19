@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.Services", "Di
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.WebApp", "DigitGallery.WebApp\DigitGallery.WebApp.csproj", "{3482C57B-3B73-46DF-B663-1AAF12CC5564}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.FormApp", "DigitGallery.FormApp\DigitGallery.FormApp.csproj", "{A8DF5C7B-72E4-430D-98B6-961FB0B80906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.FormApp", "DigitGallery.FormApp\DigitGallery.FormApp.csproj", "{A8DF5C7B-72E4-430D-98B6-961FB0B80906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.DataProcessor", "DigitGallery.DataProcessor\DigitGallery.DataProcessor.csproj", "{F28EE028-A095-42B8-BFA5-E8AC304F4B90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A8DF5C7B-72E4-430D-98B6-961FB0B80906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8DF5C7B-72E4-430D-98B6-961FB0B80906}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8DF5C7B-72E4-430D-98B6-961FB0B80906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28EE028-A095-42B8-BFA5-E8AC304F4B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28EE028-A095-42B8-BFA5-E8AC304F4B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28EE028-A095-42B8-BFA5-E8AC304F4B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28EE028-A095-42B8-BFA5-E8AC304F4B90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
