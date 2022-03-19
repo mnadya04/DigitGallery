@@ -6,4 +6,9 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DigitGallery.Models\DigitGallery.Models.csproj" />
+    <ProjectReference Include="..\DigitGallery.Services\DigitGallery.Services.csproj" />
+  </ItemGroup>
+
 </Project>
