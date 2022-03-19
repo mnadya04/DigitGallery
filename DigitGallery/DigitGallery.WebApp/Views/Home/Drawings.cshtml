@@ -1,0 +1,22 @@
+﻿@model IndexDrawingsViewModel;
+
+<h1>Drawing Explorer</h1>
+<p>Drawing's count: @Model.DrawingsCount</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Drawing name</th>
+            <th>Artist name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var drawing in @Model.Drawings)
+        {
+            <tr>
+                <td>@drawing.Name</td>
+                <td>@drawing.Artist</td>
+            </tr>
+        }
+    </tbody>
+</table>
