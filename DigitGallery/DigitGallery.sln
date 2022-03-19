@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.Data", "DigitGallery.Data\DigitGallery.Data.csproj", "{441114B6-935C-4478-8AEA-2693B1B07F4A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.ConsoleApp", "DigitGallery.ConsoleApp\DigitGallery.ConsoleApp.csproj", "{1037E1A5-E9D9-4CDA-9B91-05325600B817}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.Models", "DigitGallery.Models\DigitGallery.Models.csproj", "{22818CFE-EF81-4895-A691-7839145DD059}"
@@ -15,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.WebApp", "Digi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.FormApp", "DigitGallery.FormApp\DigitGallery.FormApp.csproj", "{A8DF5C7B-72E4-430D-98B6-961FB0B80906}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.DataProcessor", "DigitGallery.DataProcessor\DigitGallery.DataProcessor.csproj", "{F28EE028-A095-42B8-BFA5-E8AC304F4B90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitGallery.DataProcessor", "DigitGallery.DataProcessor\DigitGallery.DataProcessor.csproj", "{F28EE028-A095-42B8-BFA5-E8AC304F4B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitGallery.Data", "DigitGallery.Data\DigitGallery.Data.csproj", "{E7AD49D8-A051-4716-9071-F22123A48AA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{441114B6-935C-4478-8AEA-2693B1B07F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{441114B6-935C-4478-8AEA-2693B1B07F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{441114B6-935C-4478-8AEA-2693B1B07F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{441114B6-935C-4478-8AEA-2693B1B07F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1037E1A5-E9D9-4CDA-9B91-05325600B817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1037E1A5-E9D9-4CDA-9B91-05325600B817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1037E1A5-E9D9-4CDA-9B91-05325600B817}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{F28EE028-A095-42B8-BFA5-E8AC304F4B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F28EE028-A095-42B8-BFA5-E8AC304F4B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F28EE028-A095-42B8-BFA5-E8AC304F4B90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7AD49D8-A051-4716-9071-F22123A48AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7AD49D8-A051-4716-9071-F22123A48AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7AD49D8-A051-4716-9071-F22123A48AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7AD49D8-A051-4716-9071-F22123A48AA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

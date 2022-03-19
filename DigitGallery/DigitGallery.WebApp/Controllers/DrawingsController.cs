@@ -12,12 +12,7 @@
 
     public class DrawingsController : Controller
     {
-        private readonly AppDbContext _context;
-
-        public DrawingsController(AppDbContext context)
-        {
-            _context = context;
-        }
+        private readonly AppDbContext _context=new AppDbContext();
 
         // GET: Drawings
         public async Task<IActionResult> Index()

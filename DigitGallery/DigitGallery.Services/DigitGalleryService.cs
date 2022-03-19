@@ -39,7 +39,7 @@
             return this.appContext.Drawings.Count();
         }
 
-        public void AddArtist(string artistName, string bio)
+        public void AddArtist(string artistName, string password)
         {
             if (string.IsNullOrWhiteSpace(artistName))
             {
@@ -49,7 +49,7 @@
             Artist artist = new Artist()
             {
                 Name = artistName,
-                Bio=bio
+                Password=password
             };
             appContext.Artists.Add(artist);
             appContext.SaveChanges();

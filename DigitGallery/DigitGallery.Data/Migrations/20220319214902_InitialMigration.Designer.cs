@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitGallery.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220319200142_ArtistPassword")]
-    partial class ArtistPassword
+    [Migration("20220319214902_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
