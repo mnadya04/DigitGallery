@@ -10,6 +10,7 @@
         public string Name { get; set; }
         [MaxLength(250)]
         public string Bio { get; set; }
+        public string Password { get; set; }
         public virtual ICollection<Drawing> Drawings { get; set; } = new HashSet<Drawing>();
 
     }

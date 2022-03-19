@@ -19,14 +19,19 @@
             return appContext.Artists.Skip((page - 1) * artistsPerPage).Take(artistsPerPage).ToList();
         }
 
-        public Drawing GetDrawing(int id)
+        public int DrawingsCount()
         {
-            return appContext.Drawings.Find(id);
+            return this.appContext.Drawings.Count();
         }
 
-        public Artist GetArtist(int id)
+        public Drawing GetDrawing(string name)
         {
-            return appContext.Artists.Find(id);
+            return appContext.Drawings.Find(name);
+        }
+
+        public Artist GetArtist(string name)
+        {
+            return appContext.Artists.Find(name);
         }
 
         public int DrawingCount()
@@ -67,7 +72,7 @@
             Artist artist = appContext.Artists.FirstOrDefault(x => x.Name == artistName);
             if (artist == null)
             {
-                artist = new Artist() { Name = artistName };
+                throw new ArgumentException("Invalid artist!");
             }
             Drawing drawing = new Drawing()
             {
@@ -80,9 +85,9 @@
             appContext.SaveChanges();
         }
 
-        public void UpdateDrawingImageUrl(int drawingId, string url)
+        public void UpdateDrawingImageUrl(string name, string url)
         {
-            Drawing drawing = GetDrawing(drawingId);
+            Drawing drawing = GetDrawing(name);
             if (drawing == null)
             {
                 throw new ArgumentException("Invalid drawing id!");
@@ -92,9 +97,9 @@
             appContext.SaveChanges();
         }
 
-        public void UpdateProductPrice(int drawingId, string price)
+        public void UpdateProductPrice(string name, string price)
         {
-            Drawing drawing = GetDrawing(drawingId);
+            Drawing drawing = GetDrawing(name);
             if (drawing == null)
             {
                 throw new ArgumentException("Invalid drawing id!");
@@ -108,9 +113,9 @@
             appContext.SaveChanges();
         }
 
-        public void UpdateArtistBio(int artistId, string bio)
+        public void UpdateArtistBio(string name, string bio)
         {
-            Artist artist = GetArtist(artistId);
+            Artist artist = GetArtist(name);
             if (artist==null)
             {
                 throw new ArgumentException("Invalid artist id!");
@@ -120,9 +125,9 @@
             appContext.SaveChanges();
         }
 
-        public void DeleteDrawing(int drawingId)
+        public void DeleteDrawing(string name)
         {
-            Drawing drawing = GetDrawing(drawingId);
+            Drawing drawing = GetDrawing(name);
             if (drawing == null)
             {
                 throw new ArgumentException("Invalid drawing id!");

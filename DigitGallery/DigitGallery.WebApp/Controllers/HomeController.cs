@@ -1,17 +1,15 @@
-﻿using DigitGallery.WebApp.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace DigitGallery.WebApp.Controllers
+﻿namespace DigitGallery.WebApp.Controllers
 {
+    using DigitGallery.Services;
+    using DigitGallery.WebApp.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
+    using System.Diagnostics;
+    using System.Linq;
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private DigitGalleryService service = new DigitGalleryService();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -23,8 +21,22 @@ namespace DigitGallery.WebApp.Controllers
             return View();
         }
 
+        public IActionResult Drawings()
+        {
+            IndexDrawingsViewModel drawingModel = new IndexDrawingsViewModel();
+            drawingModel.Drawings = service.GetDrawings()
+                .Select(x => new IndexDrawingViewModel()
+                {
+                    Name = x.Name,
+                    Artist = x.Artist.Name
+                }).ToList();
+            drawingModel.DrawingsCount = service.DrawingsCount();
+            return View(drawingModel);
+        }
+
         public IActionResult Privacy()
         {
+            
             return View();
         }
 
@@ -32,6 +44,15 @@ namespace DigitGallery.WebApp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+        public ActionResult<string> RunForm()
+        {
+            //TODO form app path
+            //System.Diagnostics.Process.Start(@"C:\Users\Alishov\Desktop\School\IT-Career-V4\M07-SoftwareDevelopment\Product\Product.FormApp\bin\Debug\net5.0-windows\Product.FormApp.exe");
+
+            return "value";
         }
     }
 }
