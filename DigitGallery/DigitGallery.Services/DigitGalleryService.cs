@@ -31,9 +31,24 @@
 
         public Artist GetArtist(string name)
         {
-            return appContext.Artists.Find(name);
+           return appContext.Artists.Find(name);
+            
         }
-
+        public bool Login(string username, string password)
+        {
+            Artist user= appContext.Artists
+                .FirstOrDefault(x => x.Name == username);
+            
+            if (user == null)
+            {
+                throw new ArgumentException("User not found");
+            }
+            if (user.Password == password)
+            {
+                return true;
+            }
+            return false;
+        }
         public int DrawingCount()
         {
             return this.appContext.Drawings.Count();
@@ -55,15 +70,11 @@
             appContext.SaveChanges();
         }
 
-        public void AddDrawing(string name, string price, string artistName, string imageUrl = null)
+        public void AddDrawing(string name, double price, string artistName, string imageUrl)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentException("Invalid drawing name!");
-            }
-            if (!double.TryParse(price, out _))
-            {
-                throw new ArgumentException("Invalid drawing price!");
             }
             if (string.IsNullOrWhiteSpace(artistName))
             {
@@ -77,7 +88,7 @@
             Drawing drawing = new Drawing()
             {
                 Name = name,
-                Price = double.Parse(price),
+                Price = price,
                 Artist = artist,
                 ImageUrl = imageUrl
             };

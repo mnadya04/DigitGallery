@@ -18,6 +18,7 @@ namespace DigitGallery.FormApp
         public RegistrationForm()
         {
             InitializeComponent();
+            service = new DigitGalleryService();
 
         }
 
@@ -81,14 +82,15 @@ namespace DigitGallery.FormApp
             {
                 if (PasswordTextBox.Text == ConfirmPasswordTextBox.Text)
                 {
-                    if (service.GetArtist(UsernameTextBox.Text).ToString().Any())
+                    try
                     {
-                        MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        service.AddArtist(UsernameTextBox.Text, PasswordTextBox.Text);
                     }
-                    else
+                    catch (Exception ex)
                     {
-                       service.AddArtist(UsernameTextBox.Text, PasswordTextBox.Text);
+                        MessageBox.Show(ex.Message);
                     }
+                   
                 }
                 else
                 {
@@ -99,6 +101,15 @@ namespace DigitGallery.FormApp
             {
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+            RegistrationForm main = Application.OpenForms.OfType<RegistrationForm>().FirstOrDefault();
+            if (main != null)
+            {
+                main.Show();
+            };
+            this.Close();
         }
     }
 }
