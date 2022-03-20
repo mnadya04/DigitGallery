@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Explorer</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -46,7 +46,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <img src="@item.ImageUrl" width="500px" height="250px">
+                <img src="@item.ImageUrl">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
@@ -55,9 +55,9 @@
                 @Html.DisplayFor(modelItem => item.Artist.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn btn-outline-dark" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                <a class="btn btn-outline-dark"asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                <a class="btn btn-outline-danger"asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
