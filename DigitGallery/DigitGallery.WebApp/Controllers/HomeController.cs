@@ -50,7 +50,7 @@
         public ActionResult<string> RunForm()
         {
             //TODO form app path
-            //System.Diagnostics.Process.Start(@"C:\Users\Alishov\Desktop\School\IT-Career-V4\M07-SoftwareDevelopment\Product\Product.FormApp\bin\Debug\net5.0-windows\Product.FormApp.exe");
+            System.Diagnostics.Process.Start(@"C: \Users\mtsan\OneDrive\Desktop\nadya\project\DigitGallery\DigitGallery\DigitGallery\DigitGallery.FormApp\Login.cs");
 
             return "value";
         }
